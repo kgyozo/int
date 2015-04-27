@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.epam.gyozo_karer.etl.core</groupId>
+	<artifactId>InterviewETL</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>InterviewETL</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<guava.version>18.0</guava.version>
+		<junit.version>4.12</junit.version>
+		<exec.maven.version>1.3</exec.maven.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>${exec.maven.version}</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+						<configuration>
+							<mainClass>com.epam.gyozo_karer.etl.core.App</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.1.4</version>
+				<configuration>
+					<targetClasses>
+						<param>com.epam.gyozo_karer.etl.*</param>
+					</targetClasses>
+					<targetTests>
+						<param>com.epam.gyozo_karer.etl*</param>
+					</targetTests>
+					<mutators>
+						<mutator>CONDITIONALS_BOUNDARY</mutator>
+						<mutator>NEGATE_CONDITIONALS</mutator>
+						<mutator>REMOVE_CONDITIONALS</mutator>
+						<mutator>MATH</mutator>
+						<mutator>INCREMENTS</mutator>
+						<mutator>INVERT_NEGS</mutator>
+						<mutator>INLINE_CONSTS</mutator>
+						<mutator>RETURN_VALS</mutator>
+						<mutator>VOID_METHOD_CALLS</mutator>
+						<mutator>CONSTRUCTOR_CALLS</mutator>
+						<mutator>NON_VOID_METHOD_CALLS</mutator>
+					</mutators>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

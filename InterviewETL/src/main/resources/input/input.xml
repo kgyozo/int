@@ -1,0 +1,51 @@
+<persons>
+	<person>
+		<firstName>Joe</firstName>
+		<lastName>McBright</lastName>
+		<address>1111, USA</address>
+		<highSchool>High School 1</highSchool>
+		<birthDay>1990.11.12</birthDay>
+	</person>
+	<person>
+		<firstName>Michael</firstName>
+		<lastName>Corn</lastName>
+		<address>2222, England</address>
+		<highSchool>High School 2</highSchool>
+		<birthDay>1970.10.22</birthDay>
+	</person>
+	<person>
+		<firstName>Paul</firstName>
+		<lastName>Ford</lastName>
+		<address>3333, Australia</address>
+		<highSchool>High School 3</highSchool>
+		<birthDay>1995.01.01</birthDay>
+	</person>
+	<person>
+		<firstName>Sue</firstName>
+		<lastName>Allaen</lastName>
+		<address>4444, Canada</address>
+		<highSchool>High School 4</highSchool>
+		<birthDay>1984.02.12</birthDay>
+	</person>
+	<person>
+		<firstName>Chris</firstName>
+		<lastName>Macish</lastName>
+		<address>5555, USA</address>
+		<highSchool>High School 5</highSchool>
+		<birthDay>1955.06.12</birthDay>
+	</person>
+	<person>
+		<firstName>Johanna</firstName>
+		<lastName>Alby</lastName>
+		<address>6666, Germany</address>
+		<highSchool>High School 6</highSchool>
+		<birthDay>2001.11.12</birthDay>
+	</person>
+	<person>
+		<firstName>Maggie</firstName>
+		<lastName>Sue</lastName>
+		<address>7777, Ireland</address>
+		<highSchool>High School 7</highSchool>
+		<birthDay>1989.12.29</birthDay>
+	</person>
+</persons>
